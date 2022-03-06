@@ -1,0 +1,35 @@
+$colLogo: #f04400;
+$maxWidth:100%;
+
+body {
+  background-color: #222222;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: $maxWidth/5;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: $maxWidth;
+      padding-bottom: $maxWidth;
+      background-color: #1c2529;
+      border-radius: $maxWidth/2;
+      border: 1.2vw solid $colLogo;
+    }
+    .svg {
+      position: absolute;
+      fill: $colLogo;
+      transform: rotate(-10deg);
+      padding: 15% 3% 0 15%;
+    }
+  }
+}
